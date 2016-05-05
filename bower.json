@@ -1,0 +1,27 @@
+{
+  "name": "basic app",
+  "version": "1.0.0",
+  "description": "A webapp",
+  "license": "MIT",
+  "author": [
+    "Clara Linos <clara.linos@vizzuality.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.15",
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
+    "underscore": "~1.7.0",
+    "normalize-css": "~3.0.2",
+    "d3": "~3.5.5",
+    "text": "~2.0.12",
+    "handlebars": "~2.0.0",
+    "moment": "~2.8.3"
+  }
+}
