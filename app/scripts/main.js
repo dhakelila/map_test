@@ -52,18 +52,21 @@ define([
 		},
 
 		initialize: function() {
-			
 			this._initMap();
 		},
 
 		_initMap: function() {
+		  /* this is the definition for basemap */
 			var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 			  attribution: '<a href="https://www.mapzen.com/rights">Attribution.</a>. Data &copy;<a href="https://openstreetmap.org/copyright">OSM</a> contributors.'
 			});
-
+      
+      /* Here we create the map with Leafleft... */
 			this.map = L.map(this.el, this.options.map);
+			/* ...and we add the basemap layer with Leaflet as well */
 			this.map.addLayer(layer);
-
+      
+      /*Then, we tell cartodb to create the main layer with and add it to the map */
 			cartodb
         .createLayer(this.map, this.options.cartodb)
         .addTo(this.map);
